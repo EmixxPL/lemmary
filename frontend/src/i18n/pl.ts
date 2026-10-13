@@ -1886,4 +1886,3 @@ export const pl: Catalog = {
     other: 'Nie udało się przetworzyć {count} części.',
   },
 }
-}
