@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { de } from './de'
 import { en } from './en'
 import { lang, pickLanguage, translator, type Catalog, type MessageKey } from '.'
+import { pl } from './pl'
 import { ru } from './ru'
 
 function placeholders(entry: Catalog[MessageKey]): string[] {
@@ -13,11 +14,13 @@ function placeholders(entry: Catalog[MessageKey]): string[] {
 describe('pickLanguage', () => {
   it('prefers the stored choice', () => {
     expect(pickLanguage('ru', ['de-DE', 'en'])).toBe('ru')
+    expect(pickLanguage('pl', ['de-DE', 'en'])).toBe('pl')
   })
 
   it('falls back to the first supported browser language by primary subtag', () => {
     expect(pickLanguage(null, ['fr-FR', 'de-AT', 'en'])).toBe('de')
     expect(pickLanguage(null, ['en-GB'])).toBe('en')
+    expect(pickLanguage(null, ['pl-PL', 'en'])).toBe('pl')
   })
 
   it('ignores an unknown stored value and anything off the prototype', () => {
@@ -45,6 +48,15 @@ describe('translator', () => {
     expect(t('common.documents', { count: 21 })).toBe('21 документ')
   })
 
+  it('picks the Polish plural forms', () => {
+    const { t } = translator('pl')
+    expect(t('common.documents', { count: 1 })).toBe('1 dokument')
+    expect(t('common.documents', { count: 2 })).toBe('2 dokumenty')
+    expect(t('common.documents', { count: 5 })).toBe('5 dokumentów')
+    expect(t('common.documents', { count: 12 })).toBe('12 dokumentów')
+    expect(t('common.documents', { count: 22 })).toBe('22 dokumenty')
+  })
+
   it('puts elements where the sentence says', () => {
     const { tNode } = translator('en')
     const node = tNode('common.documents', { count: 3 }) as ReactElement<{ children: unknown[] }>
@@ -57,6 +69,7 @@ describe('catalogs', () => {
   it.each([
     ['de', de],
     ['ru', ru],
+    ['pl', pl],
   ])('%s has exactly the English keys and placeholders', (_, catalog) => {
     expect(Object.keys(catalog).sort()).toEqual(Object.keys(en).sort())
     for (const key of Object.keys(en) as MessageKey[]) {

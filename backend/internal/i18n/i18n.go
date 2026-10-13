@@ -14,16 +14,16 @@ import (
 const cookieName = "lemmary_lang"
 
 var (
-	langs   = []string{"en", "de", "ru"}
-	matcher = language.NewMatcher([]language.Tag{language.English, language.German, language.Russian})
+	langs   = []string{"en", "de", "ru", "pl"}
+	matcher = language.NewMatcher([]language.Tag{language.English, language.German, language.Russian, language.Polish})
 )
 
-// FromRequest returns "en", "de" or "ru": the cookie when it names one of them,
+// FromRequest returns "en", "de", "ru" or "pl": the cookie when it names one of them,
 // else the best Accept-Language match, else English.
 func FromRequest(r *http.Request) string {
 	if c, err := r.Cookie(cookieName); err == nil {
 		switch c.Value {
-		case "en", "de", "ru":
+		case "en", "de", "ru", "pl":
 			return c.Value
 		}
 	}

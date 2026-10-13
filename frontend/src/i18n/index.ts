@@ -1,9 +1,10 @@
 import { createElement, Fragment, type ReactNode } from 'react'
 import { de } from './de'
 import { en } from './en'
+import { pl } from './pl'
 import { ru } from './ru'
 
-export const languageNames = { en: 'English', de: 'Deutsch', ru: 'Русский' } as const
+export const languageNames = { en: 'English', de: 'Deutsch', ru: 'Русский', pl: 'Polski' } as const
 export type Language = keyof typeof languageNames
 
 export type Plural = Partial<Record<Intl.LDMLPluralRule, string>> & { other: string }
@@ -11,7 +12,7 @@ export type Translation<T> = { [K in keyof T]: T[K] extends string ? string : Pl
 export type MessageKey = keyof typeof en
 export type Catalog = Translation<typeof en>
 
-const catalogs: Record<Language, Catalog> = { en, de, ru }
+const catalogs: Record<Language, Catalog> = { en, de, ru, pl }
 // A cookie rather than localStorage: the backend reads it too, for its own messages.
 const cookieName = 'lemmary_lang'
 const placeholder = /\{(\w+)\}/g
@@ -82,5 +83,5 @@ export function translator(language: Language) {
 export const { t, tNode } = translator(lang)
 
 export function docsUrl(page = ''): string {
-  return lang === 'en' ? `/docs/${page}` : `/docs/${lang}/${page}`
+  return lang === 'en' || lang === 'pl' ? `/docs/${page}` : `/docs/${lang}/${page}`
 }

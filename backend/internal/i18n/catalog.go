@@ -4,142 +4,177 @@ var catalog = map[string]map[string]string{
 	"%s must be positive": {
 		"de": "%s muss positiv sein",
 		"ru": "%s должен быть положительным",
+		"pl": "%s musi być większe od zera",
 	},
 	"A chat to resume is required.": {
 		"de": "Ein fortzusetzender Chat ist erforderlich.",
 		"ru": "Не указан чат для продолжения.",
+		"pl": "Wybierz czat, który chcesz wznowić.",
 	},
 	"A detection is already in progress.": {
 		"de": "Eine Erkennung läuft bereits.",
 		"ru": "Определение уже выполняется.",
+		"pl": "Wykrywanie jest już w toku.",
 	},
 	"A mailbox scan is already running. Try again shortly.": {
 		"de": "Ein Postfach-Scan läuft bereits. Versuchen Sie es gleich noch einmal.",
 		"ru": "Проверка почтового ящика уже выполняется. Повторите попытку чуть позже.",
+		"pl": "Skanowanie skrzynki pocztowej już trwa. Spróbuj ponownie za chwilę.",
 	},
 	"A message is required.": {
 		"de": "Eine Nachricht ist erforderlich.",
 		"ru": "Требуется сообщение.",
+		"pl": "Wiadomość jest wymagana.",
 	},
 	"A passkey response is required.": {
 		"de": "Eine Passkey-Antwort ist erforderlich.",
 		"ru": "Требуется ответ ключа доступа.",
+		"pl": "Odpowiedź klucza dostępu jest wymagana.",
 	},
 	"A password is required to initialise this instance.": {
 		"de": "Zum Einrichten dieser Instanz ist ein Passwort erforderlich.",
 		"ru": "Для настройки этого экземпляра требуется пароль.",
+		"pl": "Do skonfigurowania tej instancji wymagane jest hasło.",
 	},
 	"A reprocess job can only override the ocr, extract and embedding bindings.": {
 		"de": "Ein Neuverarbeitungsauftrag kann nur die Zuordnungen ocr, extract und embedding überschreiben.",
 		"ru": "Задание повторной обработки может переопределять только привязки ocr, extract и embedding.",
+		"pl": "Zadanie ponownego przetwarzania może nadpisywać tylko powiązania OCR, ekstrakcji i embeddingów.",
 	},
 	"A scan is already in progress.": {
 		"de": "Ein Scan läuft bereits.",
 		"ru": "Сканирование уже выполняется.",
+		"pl": "Skanowanie jest już w toku.",
 	},
 	"A split is already in progress.": {
 		"de": "Eine Aufteilung läuft bereits.",
 		"ru": "Разделение уже выполняется.",
+		"pl": "Dzielenie jest już w toku.",
 	},
 	"A tag assignment is already running.": {
 		"de": "Eine Tag-Zuweisung läuft bereits.",
 		"ru": "Назначение тегов уже выполняется.",
+		"pl": "Przypisywanie tagów już trwa.",
 	},
 	"AI chat is not configured; update Settings.": {
 		"de": "KI-Chat ist nicht konfiguriert; passen Sie die Einstellungen an.",
 		"ru": "ИИ-чат не настроен; измените Настройки.",
+		"pl": "Czat AI nie jest skonfigurowany. Zmień ustawienia.",
 	},
 	"AI configuration is managed by your hosting provider and cannot be changed here.": {
 		"de": "Die KI-Konfiguration wird von Ihrem Hosting-Anbieter verwaltet und kann hier nicht geändert werden.",
 		"ru": "Конфигурацией ИИ управляет ваш хостинг-провайдер, здесь её изменить нельзя.",
+		"pl": "Konfiguracją AI zarządza dostawca hostingu. Nie można jej zmienić w tym miejscu.",
 	},
 	"AI is not configured; update Settings.": {
 		"de": "KI ist nicht konfiguriert; passen Sie die Einstellungen an.",
 		"ru": "ИИ не настроен; измените Настройки.",
+		"pl": "AI nie jest skonfigurowane. Zmień ustawienia.",
 	},
 	"AI search is not configured; update Settings.": {
 		"de": "KI-Suche ist nicht konfiguriert; passen Sie die Einstellungen an.",
 		"ru": "ИИ-поиск не настроен; измените Настройки.",
+		"pl": "Wyszukiwanie AI nie jest skonfigurowane. Zmień ustawienia.",
 	},
 	"API key is required.": {
 		"de": "API-Schlüssel ist erforderlich.",
 		"ru": "Требуется API-ключ.",
+		"pl": "Klucz API jest wymagany.",
 	},
 	"Admin access required.": {
 		"de": "Administratorzugriff erforderlich.",
 		"ru": "Требуются права администратора.",
+		"pl": "Wymagany jest dostęp administratora.",
 	},
 	"Admin accounts cannot be changed here.": {
 		"de": "Administratorkonten können hier nicht geändert werden.",
 		"ru": "Учётные записи администраторов здесь изменить нельзя.",
+		"pl": "Nie można zmieniać kont administratorów w tym miejscu.",
 	},
 	"An admin account already exists.": {
 		"de": "Ein Administratorkonto existiert bereits.",
 		"ru": "Учётная запись администратора уже существует.",
+		"pl": "Konto administratora już istnieje.",
 	},
 	"An import is already in progress.": {
 		"de": "Ein Import läuft bereits.",
 		"ru": "Импорт уже выполняется.",
+		"pl": "Import jest już w toku.",
 	},
 	"Assigning tags with AI needs a model; configure one in Settings.": {
 		"de": "Für die Tag-Zuweisung per KI wird ein Modell benötigt; konfigurieren Sie eines in den Einstellungen.",
 		"ru": "Для назначения тегов с помощью ИИ нужна модель; настройте её в Настройках.",
+		"pl": "Przypisywanie tagów przez AI wymaga modelu. Skonfiguruj go w Ustawieniach.",
 	},
 	"Authentication required.": {
 		"de": "Anmeldung erforderlich.",
 		"ru": "Требуется вход в систему.",
+		"pl": "Wymagane jest uwierzytelnienie.",
 	},
 	"Automatic detection needs an extraction model; configure one in Settings.": {
 		"de": "Die automatische Erkennung benötigt ein Extraktionsmodell; konfigurieren Sie eines in den Einstellungen.",
 		"ru": "Для автоматического определения нужна модель извлечения; настройте её в Настройках.",
+		"pl": "Automatyczne wykrywanie wymaga modelu ekstrakcji. Skonfiguruj go w Ustawieniach.",
 	},
 	"Chat is unavailable.": {
 		"de": "Chat ist nicht verfügbar.",
 		"ru": "Чат недоступен.",
+		"pl": "Czat jest niedostępny.",
 	},
 	"Chat not found.": {
 		"de": "Chat nicht gefunden.",
 		"ru": "Чат не найден.",
+		"pl": "Nie znaleziono czatu.",
 	},
 	"ChatGPT sign-in failed: %v": {
 		"de": "ChatGPT-Anmeldung fehlgeschlagen: %v",
 		"ru": "Не удалось войти через ChatGPT: %v",
+		"pl": "Logowanie do ChatGPT nie powiodło się: %v",
 	},
 	"Chats are unavailable.": {
 		"de": "Chats sind nicht verfügbar.",
 		"ru": "Чаты недоступны.",
+		"pl": "Czaty są niedostępne.",
 	},
 	"Choose the password that will unlock this archive. You will be given a recovery code — it is shown once.": {
 		"de": "Wählen Sie das Passwort, mit dem dieses Archiv entsperrt wird. Sie erhalten einen Wiederherstellungscode – er wird nur einmal angezeigt.",
 		"ru": "Выберите пароль, которым будет разблокироваться этот архив. Вы получите код восстановления — он показывается один раз.",
+		"pl": "Wybierz hasło do odblokowania tego archiwum. Otrzymasz kod odzyskiwania, który zostanie wyświetlony tylko raz.",
 	},
 	"Continue": {
 		"de": "Weiter",
 		"ru": "Продолжить",
+		"pl": "Dalej",
 	},
 	"Could not read the queue.": {
 		"de": "Die Warteschlange konnte nicht gelesen werden.",
 		"ru": "Не удалось прочитать очередь.",
+		"pl": "Nie udało się odczytać kolejki.",
 	},
 	"Could not read the unprocessed documents.": {
 		"de": "Die unverarbeiteten Dokumente konnten nicht gelesen werden.",
 		"ru": "Не удалось прочитать необработанные документы.",
+		"pl": "Nie udało się odczytać nieprzetworzonych dokumentów.",
 	},
 	"Could not save the translation.": {
 		"de": "Die Übersetzung konnte nicht gespeichert werden.",
 		"ru": "Не удалось сохранить перевод.",
+		"pl": "Nie udało się zapisać tłumaczenia.",
 	},
 	"Could not start: %v": {
 		"de": "Start fehlgeschlagen: %v",
 		"ru": "Не удалось запустить: %v",
+		"pl": "Nie udało się uruchomić: %v",
 	},
 	"Cross-origin requests are not accepted here.": {
 		"de": "Ursprungsübergreifende Anfragen werden hier nicht angenommen.",
 		"ru": "Запросы с другого источника здесь не принимаются.",
+		"pl": "Żądania z innych źródeł nie są tutaj akceptowane.",
 	},
 	"Cross-site requests are not accepted here.": {
 		"de": "Websiteübergreifende Anfragen werden hier nicht angenommen.",
 		"ru": "Межсайтовые запросы здесь не принимаются.",
+		"pl": "Żądania międzywitrynowe nie są tutaj akceptowane.",
 	},
 	"Detection failed to start: %v": {
 		"de": "Die Erkennung konnte nicht gestartet werden: %v",
